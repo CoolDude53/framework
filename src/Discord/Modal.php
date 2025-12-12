@@ -161,8 +161,8 @@ class Modal
      */
     public function getComponents(): array
     {
-        $components = collect($this->components)
-            ->map(fn ($component) => ActionRow::new()->addComponent($component));
+        $components = collect($this->components);
+        //            ->map(fn ($component) => ActionRow::new()->addComponent($component));
 
         if ($components->isEmpty()) {
             throw new Exception('The modal must have at least one component.');
